@@ -10,16 +10,16 @@ type test interface {
 }
 
 func New(t test) expectFn {
-	return func (actual interface{}) *expectation {
+	return func(actual interface{}) *expectation {
 		return &expectation{
-			test: t,
+			test:   t,
 			actual: actual,
 		}
 	}
 }
 
 type expectation struct {
-	test test
+	test   test
 	actual subject
 }
 

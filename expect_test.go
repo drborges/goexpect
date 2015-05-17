@@ -1,8 +1,8 @@
 package goexpect_test
 
 import (
-	"testing"
 	"github.com/drborges/goexpect"
+	"testing"
 )
 
 func TestExpectStringEquality(t *testing.T) {
@@ -12,8 +12,8 @@ func TestExpectStringEquality(t *testing.T) {
 }
 
 func TestExpectStructEquality(t *testing.T) {
-	a := struct {name string} {"diego"}
-	b := struct {name string} {"diego"}
+	a := struct{ name string }{"diego"}
+	b := struct{ name string }{"diego"}
 
 	expect := goexpect.New(t)
 
@@ -21,8 +21,8 @@ func TestExpectStructEquality(t *testing.T) {
 }
 
 func TestExpectDeepEquality(t *testing.T) {
-	a := &struct {name string} {"diego"}
-	b := &struct {name string} {"diego"}
+	a := &struct{ name string }{"diego"}
+	b := &struct{ name string }{"diego"}
 
 	expect := goexpect.New(t)
 
