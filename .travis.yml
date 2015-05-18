@@ -1,0 +1,10 @@
+language: go
+
+go:
+  - 1.4
+
+install:
+  - go get github.com/drborges/goexpect
+
+script:
+  - go test -v github.com/drborges/goexpect
