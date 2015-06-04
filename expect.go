@@ -29,6 +29,12 @@ func (this *expectation) ToBe(expected subject) {
 	}
 }
 
+func (this *expectation) ToNotBe(expected subject) {
+	if this.actual == expected {
+		this.test.Errorf("Expected %v to not be %v", expected, this.actual)
+	}
+}
+
 func (this *expectation) ToDeepEqual(expected subject) {
 	if !reflect.DeepEqual(this.actual, expected) {
 		this.test.Errorf("Expected %v, got %v", expected, this.actual)

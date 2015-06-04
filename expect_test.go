@@ -28,3 +28,8 @@ func TestExpectDeepEquality(t *testing.T) {
 
 	expect(a).ToDeepEqual(b)
 }
+
+func TestExpectToNotBe(t *testing.T) {
+	expect := goexpect.New(t)
+	expect(1).ToNotBe(2)
+}
